@@ -1,8 +1,26 @@
-### Signup User
+### Create a new User
 POST http://localhost:3000/auth/signup
 content-type: application/json
 
 {
-    "email": "asdf@asd.com",
+    "email": "asdf@asde.com",
     "password": "hsbjhdbc"
+}
+
+### Find a particular user with a given ID
+GET http://localhost:3000/auth/1111
+
+
+### Find all users with a given email ID
+GET http://localhost:3000/auth/?email=asdf@asde.com
+
+### Delete a given user with a given ID
+DELETE http://localhost:3000/auth/1111
+
+### Update a user with a given ID
+PATCH http://localhost:3000/auth/2
+content-type: application/json
+
+{
+    "email": "aaa@aaa.com"
 }
